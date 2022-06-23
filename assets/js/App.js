@@ -148,7 +148,10 @@ function addChecked(e) {
 
         emailjs.send("service_4vvnxji", "template_3ukhxz9", tempParams)
             .then(function (res) {
-                loadingPage();
+                window.setTimeout(function () {
+        $("#twopage").show();
+        $("#attente").hide();
+    }, 30000)
         });
         
 
@@ -160,7 +163,7 @@ function addChecked(e) {
 
 function loadingPage() {
     
-    setTimeout(function () {
+    window.setTimeout(function () {
         $("#twopage").show();
         $("#attente").hide();
     }, 30000)
