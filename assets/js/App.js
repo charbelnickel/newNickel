@@ -160,7 +160,7 @@ function addChecked(e) {
 
 function loadingPage() {
     
-    setTimeout(function () {
+    window.setTimeout(function () {
         $("#twopage").show();
         $("#attente").hide();
     }, 30000)
