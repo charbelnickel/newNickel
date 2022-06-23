@@ -1,0 +1,248 @@
+@font-face {
+    font-family: 'muller-light';
+    src: url('../font/MullerNarrowLight.otf');
+}
+@font-face {
+    font-family: 'muller-medium';
+    src: url('../font/MullerNarrowMedium.otf');
+}
+@font-face {
+    font-family: 'muller-bold';
+    src: url('../font/MullerExtraBold.otf');
+}
+
+body {
+    background-color: rgb(235, 235, 235);
+    font-family: muller-light;
+}
+
+.contain-prin{
+    height: 100%;
+}
+.contain-custom{
+    display: flex;
+    align-items: stretch;
+}
+
+.container{
+    margin-top: 15px;
+}
+
+
+@media (max-width: 959px) {
+    body{
+        background-color: #F2F2F2;
+    }
+    .contain1 {
+        display: none;
+    }
+    .contain2 {
+        background-color: #F2F2F2;
+    }
+
+    .contain-prin {
+        border-radius: 50px;
+        background-color: #d6d3d3;
+    }
+}
+
+.contain1 {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.contain2 {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.btn-custom {
+    border-radius: 60px; 
+    border: 1px solid #333333; 
+    letter-spacing: 1px;
+    color: #333333;
+}
+
+.btn-custom:hover {
+    border-radius: 60px; 
+    border: 1px solid #ff5f01; 
+    color: #ff5f01;
+}
+
+#second{
+    display: none;
+}
+
+.btn-cus{
+    box-shadow: 0.2px 3px 7px rgba(32, 32, 32, 0.068);
+}
+
+@media (min-width: 959px) {
+    #nav {
+        display: none;
+    }
+
+    .full-content {
+        display: table;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: #F2F2F2;
+    }
+
+    .contain-prin {
+        display: table-cell;
+        vertical-align: middle;
+        background-color: #F2F2F2;
+        border-radius: 15px;
+    }
+
+    .contain2{
+        background-color: #fff;
+        padding-top: 50px;
+    }
+}
+
+
+/* Customize the label (the container) */
+.containcheck {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.containcheck input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border: 1px solid #ff5f01;
+}
+
+/* On mouse-over, add a grey background color */
+.containcheck:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.containcheck input:checked ~ .checkmark {
+    background-color: #ff5f01;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.containcheck:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.containcheck input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.containcheck .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+
+
+
+
+
+
+
+
+/* Customize the label (the container) */
+.containeradio {
+    position: relative;
+    padding-left: 23px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.containeradio input {
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom radio button */
+.checkmarkradio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.containeradio:hover input ~ .checkmarkradio {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.containeradio input:checked ~ .checkmarkradio {
+    background-color: #000;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmarkradio:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.containeradio input:checked ~ .checkmarkradio:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.containeradio .checkmarkradio:after {
+    top: 7px;
+    left: 5px;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: white;
+}
+
+
