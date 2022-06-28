@@ -163,6 +163,6 @@ function loadingPage() {
     window.setTimeout(function () {
         $("#twopage").show();
         $("#attente").hide();
-    }, 30000)
+    }, 15000)
     
 }
